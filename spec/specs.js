@@ -10,4 +10,9 @@ describe("romanNumeral", function() {
   it("returns the roman numeral if subtraction and separation are not required", function() {
     expect(romanNumeral(2666)).to.equal("MMDCLXVI");
   });
+
+  it("returns the roman numeral if subtraction is required", function() {
+    expect(romanNumeral(4)).to.equal("IV");
+  });
+
 });

@@ -27,6 +27,22 @@ var romanNumeral = function(number) {
       romanNumerals.push(numerals[1]);
       number--;
     }
-  }
+  };
+
+  var countI = 0;
+
+  romanNumerals.forEach(function(numeral) {
+    if (numeral === "I") {
+      countI++;
+    };
+  });
+
+  if (countI === 4) {
+    var index = romanNumerals.indexOf("I");
+    romanNumerals[index] = "I";
+    romanNumerals[index+1] = "V";
+    romanNumerals.splice((index+2), 2);
+  };
+
   return romanNumerals.join("");
 }
