@@ -5,7 +5,22 @@ var romanNumeral = function(number) {
   var romanNumerals = [];
 
   while (number > 0) {
-    if (number >= 5) {
+    if (number >= 1000) {
+      romanNumerals.push(numerals[1000]);
+      number -= 1000;
+    } else if (number >= 500) {
+      romanNumerals.push(numerals[500]);
+      number -= 500;
+    } else if (number >= 100) {
+      romanNumerals.push(numerals[100]);
+      number -= 100;
+    } else if (number >= 50) {
+      romanNumerals.push(numerals[50]);
+      number -= 50;
+    } else if (number >= 10) {
+      romanNumerals.push(numerals[10]);
+      number -= 10;
+    } else if (number >= 5) {
       romanNumerals.push(numerals[5]);
       number -= 5;
     } else if (number >= 1) {
